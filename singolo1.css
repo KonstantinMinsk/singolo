@@ -408,7 +408,7 @@ body {
     background: url(/assets/icons/heart.png) no-repeat center;
 }
 .services_items li:nth-child(4) .services-icon {
-    background: url(/assets/icons/phone.svg) no-repeat center;
+    background: url(/assets/icons/phone.png) no-repeat center;
 }
 .services_items li:nth-child(5) .services-icon {
     background: url(/assets/icons/bubble.png) no-repeat center;
