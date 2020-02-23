@@ -1,0 +1,418 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+
+    font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Блок растяжка для float */ 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Шапка */ 
+.header__page {
+    width: 100%;
+    background-color: #2d303a;
+    height: 89px;
+
+    box-shadow: 0 7px 0 0 #323746;
+    box-sizing: content-box;
+}
+
+.logo {
+    float: left;
+
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+
+    color: #ffffff;
+    
+    padding: 0;
+    margin: 0;
+    margin-top: 34px;
+}
+
+.logo span {
+    color: #f06c64;
+}
+ /* Прячем h1 - но для поисковиков будет виден */ 
+.visuallyhidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+
+.header__navigation {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+    margin-top: 38px;
+}
+
+/*ссылки frontend KASKO*/
+.navigation a  { 
+    text-decoration: none;
+
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 8px;
+    text-transform: uppercase;
+
+    padding: 0;
+    margin: 0;
+
+    margin-left: 15px;
+    margin-right: 14px;
+    letter-spacing: -10%;
+    transition: 500ms;
+}
+.navigation li:nth-child(1) a {
+    color: #f06c64;
+}
+.navigation li:nth-child(5) a {
+    margin-right: 0;
+}
+.navigation a:hover {
+    text-decoration: underline;
+    color: #d69c99;
+}
+.navigation a:active {
+    color: #f06c64;
+    text-decoration: none;
+}
+
+/* точка в меню через псевдоэлемент */
+.navigation ul li {
+    position: relative;
+}
+.navigation a::after {
+    position: absolute;
+
+    content: "";
+    width: 2px;
+    height: 2px;
+    background-color: #494e62;
+    top: 49px;
+
+    display: block;
+}
+.navigation li:nth-child(1) a::after {
+    display: none;
+}
+
+
+/* Секция slider frontented Kasko*/ 
+.slider {
+    background-color: #f06c64;
+    box-shadow: 0 6px 0 0 #ea676b;
+}
+.slider-flex {
+    display: flex;
+    justify-content: flex-start;
+    height: 594px;
+
+    margin: 0px;
+    margin-top: 6px;
+    padding: 0;
+}
+
+.conteiner-for-button-slider {
+    flex: 0 1 70px;
+    max-width: 70px;
+}
+
+.button-slider {
+    margin-top: 281px;
+
+    width: 16px;
+    height: 27px;
+    border: none;
+    
+    background: url(/assets/chevron/chev-left.svg) no-repeat center;
+
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.button-slider-right {
+    transform: rotate(180deg);
+    margin-left: 54px;
+}
+
+.button-slider:hover {
+    filter: brightness(70%);
+}
+
+/* У кнопки в состоянии pressed или focus - border КАК УБРАТЬ?*/
+/*
+.button-left {
+    background: url(/assets/chevron/chev-left.svg) no-repeat center;
+}
+/* Как вариант можно перевернуть кнопку, если задана одна картинка для всех 
+.button-right {
+    background: url(/assets/chevron/chev-right.svg) no-repeat center;
+}
+*/
+
+.mobile__vertical {
+    flex: 0 1 250px;
+    max-width: 250px;
+    position: relative;
+
+    margin: 0px;
+    padding: 0px;
+    margin-right: 70px;
+}
+.phone__vertical {
+    position: absolute;
+    z-index: 20;
+    top: 10px;
+    left: -36px;
+
+    width: 260px;
+    height: 600px;
+    background-image: url(/assets/iPhone-Vertical.png);
+    background-repeat: no-repeat;
+
+    margin: 0;
+    padding: 0px;
+}
+.display__vertical {
+
+    position: absolute;
+
+    width: 194px;
+    height: 338px;
+    box-sizing: border-box;
+    top: 116px;
+    left: 12px;
+
+    background-image: url(/assets/LayerVertical.png);
+    background-repeat: no-repeat;
+    border: 3px solid #c6c6c6;
+    border-radius: 5px;
+    background-position: -12px -136px;
+    z-index: 30;
+}
+.shadow__vertical {
+    position: absolute;
+
+    top: 54px;
+    left: 2px;
+
+    width: 250px;
+    height: 490px;
+    background-image: url(/assets/Shadow.png);
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+
+.mobile__horizontal {
+    flex: 0 1 490px;
+    max-width: 490px;
+    position: relative;
+
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+
+}
+.phone__horizontal {
+    position: absolute;
+    z-index: 20;
+    top: 2px;
+    left: 106px;
+
+    width: 260px;
+    height: 530px;
+    background-image: url(/assets/iPhone-Vertical.png);
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+}
+.display__horizontal {
+    position: absolute;
+
+    width: 340px;
+    height: 192px;
+    box-sizing: border-box;
+    top: 186px;
+    left: 54px;
+
+    background-image: url(/assets/LayerHorizontal.png);
+    background-repeat: no-repeat;
+    border: 3px solid #c6c6c6;
+    border-radius: 3px;
+    background-position: -124px -119px;
+    z-index: 30;
+
+}
+.shadow__horizontal {
+    position: absolute;
+
+    top: 173px;
+    left: 0px;
+
+    width: 483px;
+    height: 240px;
+    background-image: url(/assets/ShadowHorizontal.png);
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+
+/* Services */ 
+
+.services h2 {
+    margin-top: 74px;
+
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-weight: 900;
+}
+
+.services__description {
+    padding-top: 3px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 300;
+}
+
+/* Grid для содержимого таблицы ячейка элемент грида */ 
+.services_items {
+    list-style: none;
+    padding: 0;
+    margin-top: 47px;
+
+    display: grid;
+    width: 100%;
+    grid-row-gap: 32px;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "l1 l2 l3"
+        "l4 l5 l6"
+}
+
+.services_items li:nth-child(1) {
+    grid-area: l1;
+}
+.services_items li:nth-child(2) {
+    grid-area: l2;
+}
+.services_items li:nth-child(3) {
+    grid-area: l3;
+}
+.services_items li:nth-child(4) {
+    grid-area: l4;
+}
+.services_items li:nth-child(5) {
+    grid-area: l5;
+}
+.services_items li:nth-child(6) {
+    grid-area: l6;
+}
+
+
+
+/* Grid для содержимого каждой ячейки made Kasko */ 
+
+.services_items li {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows   : auto auto auto;
+    grid-row-gap: 9px;
+    grid-column-gap: 20px;
+    grid-template-areas:
+        "icon h3"
+        "icon  p"
+        "icon  p";
+    
+}
+/* Задаем шрифт h3 для каждого li*/
+.services_items li h3 {
+    grid-area: h3;
+
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+
+    margin: 0;
+}
+.services_items li p {
+    grid-area: p;
+
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+
+
+    margin: 0;
+}
+/* Иконка обернута в div */
+.services-icon {
+    grid-area: icon;
+
+    width: 60px;
+    height: 60px;
+    border: 3px solid #666d89;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+/* Задаем иконкку индивидуально для каждого элемента div в li */
+.services_items li:nth-child(1) .services-icon {
+    background: url(/assets/icons/pen.png) no-repeat center;
+}
+.services_items li:nth-child(2) .services-icon {
+    background: url(/assets/icons/bulb.png) no-repeat center;
+}
+.services_items li:nth-child(3) .services-icon {
+    background: url(/assets/icons/heart.png) no-repeat center;
+}
+.services_items li:nth-child(4) .services-icon {
+    background: url(/assets/icons/phone.svg) no-repeat center;
+}
+.services_items li:nth-child(5) .services-icon {
+    background: url(/assets/icons/bubble.png) no-repeat center;
+}
+.services_items li:nth-child(6) .services-icon {
+    background: url(/assets/icons/star.png) no-repeat center;
+}
