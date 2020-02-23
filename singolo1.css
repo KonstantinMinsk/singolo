@@ -157,7 +157,7 @@ body {
     height: 27px;
     border: none;
     
-    background: url(/assets/chevron/chev-left.svg) no-repeat center;
+    background: url(./assets/chevron/chev-left.svg) no-repeat center;
 
     cursor: pointer;
     transition: 500ms;
@@ -200,7 +200,7 @@ body {
 
     width: 260px;
     height: 600px;
-    background-image: url(/assets/iPhone-Vertical.png);
+    background-image: url(./assets/iPhone-Vertical.png);
     background-repeat: no-repeat;
 
     margin: 0;
@@ -216,7 +216,7 @@ body {
     top: 116px;
     left: 12px;
 
-    background-image: url(/assets/LayerVertical.png);
+    background-image: url(./assets/LayerVertical.png);
     background-repeat: no-repeat;
     border: 3px solid #c6c6c6;
     border-radius: 5px;
@@ -231,7 +231,7 @@ body {
 
     width: 250px;
     height: 490px;
-    background-image: url(/assets/Shadow.png);
+    background-image: url(./assets/Shadow.png);
     background-repeat: no-repeat;
     z-index: 10;
 }
@@ -255,7 +255,7 @@ body {
 
     width: 260px;
     height: 530px;
-    background-image: url(/assets/iPhone-Vertical.png);
+    background-image: url(./assets/iPhone-Vertical.png);
     background-repeat: no-repeat;
     transform: rotate(90deg);
 }
@@ -268,7 +268,7 @@ body {
     top: 186px;
     left: 54px;
 
-    background-image: url(/assets/LayerHorizontal.png);
+    background-image: url(./assets/LayerHorizontal.png);
     background-repeat: no-repeat;
     border: 3px solid #c6c6c6;
     border-radius: 3px;
@@ -284,7 +284,7 @@ body {
 
     width: 483px;
     height: 240px;
-    background-image: url(/assets/ShadowHorizontal.png);
+    background-image: url(./assets/ShadowHorizontal.png);
     background-repeat: no-repeat;
     z-index: 10;
 }
@@ -399,20 +399,20 @@ body {
 
 /* Задаем иконкку индивидуально для каждого элемента div в li */
 .services_items li:nth-child(1) .services-icon {
-    background: url(/assets/icons/pen.png) no-repeat center;
+    background: url(./assets/icons/pen.png) no-repeat center;
 }
 .services_items li:nth-child(2) .services-icon {
-    background: url(/assets/icons/bulb.png) no-repeat center;
+    background: url(./assets/icons/bulb.png) no-repeat center;
 }
 .services_items li:nth-child(3) .services-icon {
-    background: url(/assets/icons/heart.png) no-repeat center;
+    background: url(./assets/icons/heart.png) no-repeat center;
 }
 .services_items li:nth-child(4) .services-icon {
-    background: url(/assets/icons/phone.png) no-repeat center;
+    background: url(./assets/icons/phone.png) no-repeat center;
 }
 .services_items li:nth-child(5) .services-icon {
-    background: url(/assets/icons/bubble.png) no-repeat center;
+    background: url(./assets/icons/bubble.png) no-repeat center;
 }
 .services_items li:nth-child(6) .services-icon {
-    background: url(/assets/icons/star.png) no-repeat center;
+    background: url(./assets/icons/star.png) no-repeat center;
 }
