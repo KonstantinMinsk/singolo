@@ -96,7 +96,7 @@ p {
     overflow: hidden;
     height: 604px;
 
-    transition: .8s ease-in;
+    transition: .8s;
 }
 
 .portfolio__items li img {
