@@ -96,7 +96,7 @@ p {
     overflow: hidden;
     height: 604px;
 
-    transition: 2s ease-in;
+    transition: .8s ease-in;
 }
 
 .portfolio__items li img {
@@ -218,9 +218,4 @@ figcaption {
 }
 .social-icons a:nth-child(4) {
     background: url(./assets/social/linkedin.svg) no-repeat center;
-}
-
-.AAA {
-    background: #767e9e;
-    height: 100px;
 }
