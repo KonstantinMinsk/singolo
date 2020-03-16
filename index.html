@@ -13,12 +13,12 @@
             <h1 class="visuallyhidden">Task Singolo</h1>
             <a class="logo" href="#">Singolo<span>*</span></a>
             <nav class="header__navigation">
-                <ul class="navigation">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul class="navigation" id="menu">
+                    <li><a href="#" class="nav_active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about-us">About</a></li>
+                    <li><a href="#contacts">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,28 +28,33 @@
     <section class="slider">
         <div class="wrapper">
         <div class="slider-flex">   
-            <div class="conteiner-for-button-slider">
+            
             <button class="button-slider button-slider-left"></button>
-            </div>
-
-            <div class="mobile__vertical">
-                <div class="display__vertical"></div>
-                <div class="shadow__vertical"></div>
-                <div class="phone__vertical"></div>
-            </div>
-            <div class="mobile__horizontal">
-                <div class="display__horizontal"></div>
-                <div class="shadow__horizontal"></div>
-                <div class="phone__horizontal"></div>
-            </div>
-            <div class="conteiner-for-button-slider">
+                <div class="infinity-slider">
+                    <div class="sl">
+                        <div class="mobile__vertical">
+                            <div class="display__vertical"></div>
+                            <div class="shadow__vertical"></div>
+                            <div class="phone__vertical"></div>
+                            <div class="phone_btn1"></div>
+                        </div>
+                        <div class="mobile__horizontal">
+                            <div class="display__horizontal"></div>
+                            <div class="shadow__horizontal"></div>
+                            <div class="phone__horizontal"></div>
+                            <div class="phone_btn2"></div>
+                        </div>
+                    </div>
+                    <div class="sl">
+                        
+                    </div>
+                </div>    
             <button class="button-slider button-slider-right"></button>
-            </div>
         </div>
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="wrapper">
             <h2>Our Services</h2>
             <p class="services__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. </p>
@@ -92,14 +97,15 @@
         <div class="wrapper">
             <h2>Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <ul class="buttons__tags">
-                <li><a href="">All</a></li>
-                <li><a href="">Web Design</a></li>
-                <li><a href="">Graphic Design</a></li>
-                <li><a href="">Artwork</a></li>
+            <ul class="buttons__tags" id="portfolio-list">
+                <li><a href="#">All</a></li>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Artwork</a></li>
             </ul>
-            <ul class="portfolio__items">
-                <li><a href="#" target="blank">
+            <ul class="portfolio__items" id="portfolio">
+                <li>
+                    <a href="#" target="blank">
                     <img src="./assets/Portfolio/1.jpg" alt="Work">
                     </a>
                 </li>
@@ -147,23 +153,11 @@
                     <img src="./assets/Portfolio/12.jpg" alt="Work">
                     </a>
                 </li>
-                <li><a href="#" target="blank">
-                    <img src="./assets/Portfolio/10.jpg" alt="Work">
-                    </a>
-                </li>
-                <li><a href="#" target="blank">
-                    <img src="./assets/Portfolio/11.jpg" alt="Work">
-                    </a>
-                </li>
-                <li><a href="#" target="blank">
-                    <img src="./assets/Portfolio/12.png" alt="Work">
-                    </a>
-                </li>
             </ul>
         </div>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about-us">
         <div class="wrapper ">
             <h2>About Us</h2>
             <p> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, 
@@ -226,19 +220,29 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="wrapper">
             <h2 class="contacts__title">Get a Quote</h2>
             <p class="contacts__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="contacts-flex">
             <article class="contact-form">
                 <form action="#" method="POST">
-                    <input required type="text" name="name" placeholder="Name (Required)">
-                    <input required type="email" name="email" placeholder="Email (Required)">
-                    <input required type="text" name="subject" placeholder="Subject">
-                    <textarea name="message" placeholder="Describe your project in detail..." ></textarea>
-                    <button type="submit" formmethod="POST">Submit</button>
+                    <input id="name" required type="text" name="name" placeholder="Name" required>
+                    <input id='email' required type="email" name="email" placeholder="Email" required>
+                    <input id="subject" type="text" name="subject" placeholder="Subject">
+                    <textarea name="project" id="project" placeholder="Describe your project in detail..." ></textarea>
+                    <button id="form-btn" type="submit" formmethod="POST">Submit</button>
                 </form>
+                <!--Куда добавлять блок ЗАТЕМНЕНИЯ?-->
+                <div id="message-block" class="hidden">
+                    <div id="message">
+                        <p id="result"> </p>
+                        <p id="res_subject"> </p>
+                        <p id="res_project"> </p>
+                        <br>
+                        <button id="form-btn-close">OK</button>
+                    </div>
+                </div>
             </article>
             
             <article class="contacts-information">
@@ -276,6 +280,6 @@
         </div>
     </footer>
 
-
+<script src="script.js"></script>
 </body>
 </html>
