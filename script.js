@@ -145,6 +145,62 @@ function clickBUTTUN(BTN, DISPLAY) {
 clickBUTTUN(BUTTON1, DISPLAY_VERTICAL);
 clickBUTTUN(BUTTON2, DISPLAY_HORIZONTAL);
 
-
+/*
 // Слайдер 
+const SLIDER_section = document.querySelector('.slider');
+const BTN_arroy_left = document.querySelector('.button-slider-left');
+const BTN_arroy_right = document.querySelector('.button-slider-right');
+/*
+function clickArroy(BTN_arr, SL_sec) {
+    BTN_arr.addEventListener("click", () => {
+        if (SL_sec.style.backgroundColor = '#f06c64'){
+            SL_sec.style.backgroundColor = '#ffffff';
+            SL_sec.style.boxShadow = '#648BF0;';
+        } else if (SL_sec.style.backgroundColor = 'rgb(255, 255, 255);') {
+            SL_sec.style.backgroundColor = '#f06c64'
+        }
+        })
+    };
+    clickArroy(BTN_arroy_left, SLIDER_section)
+    clickArroy(BTN_arroy_right, SLIDER_section)
+
+*/
+
+
+      // Slider
+  const SLIDER_section = document.querySelector(".slider");
+  const ARROW_LEFT = document.querySelector('.button-slider-left');;
+  const ARROW_RIGHT = document.querySelector('.button-slider-right');
+  let slides = document.querySelectorAll('.sl');
+
+  let current = 0;
+
+function clickArroy() {
+    for (let i = 0; i < slides.length; i++ ) {
+        slides[i].classList.add('opa');
+    }
+    slides[current].classList.remove('opa');
+}
+//clickArroy() ; // делаем авто клик, чтобы слайдер работал с ПЕРВОГО клика пользователя
+// клик по левой кнопке
+function ArrBtn(ARROW, ) {
+    ARROW.onclick = function() {
+        if (current - 1 == -1) {
+            current = slides.length-1;
+            SLIDER_section.style.backgroundColor = "#648bf0";
+            SLIDER_section.classList.add("shadow_color");
+        } else {
+            current--;
+            SLIDER_section.style.backgroundColor = "#f06c64";
+            SLIDER_section.classList.remove("shadow_color");
+
+        }
+        clickArroy(); // вызываем ф-цию которая выше slider (All - add.('opacity0')) / slides[current] remove('opacity0') ДЕЛАЕМ ВИДИМЫМ
+    }
+}
+ArrBtn(ARROW_LEFT);
+ArrBtn(ARROW_RIGHT);
+
+
+
 

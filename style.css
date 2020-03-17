@@ -140,12 +140,17 @@ body {
 .slider {
     background-color: #f06c64;
     box-shadow: 0 6px 0 0 #ea676b;
+    transition: all ease 1s;
 }
+.shadow_color {
+    box-shadow: 0 6px 0 0 #648BF0;
+}
+/* slide - для позиционирования слайдов div (в которых есть div absolute */
 .slider-flex, .sl {
     display: flex;
     justify-content: flex-start;
     height: 594px;
-
+    width: 100%;
     margin: 0px;
     margin-top: 6px;
     padding: 0;
@@ -155,7 +160,6 @@ body {
     flex: 0 1 70px;
     max-width: 70px;
 }
-
 .slider .button-slider {
     margin-top: 281px;
 
@@ -297,6 +301,37 @@ body {
 }
 
 
+/* Grid Slider */ 
+/*
+.grid-slider {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    width: 100%;
+    height: 594px;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas:
+        "btnL infS btnR";
+
+    align-items: center;
+}
+.grid-slider .button-left {
+    grid-area: btnL;
+    margin: 0;
+}
+.grid-slider .button-right {
+    grid-area: btnR;
+    margin: 0;
+    transform: rotate(180deg);
+}
+.infinity-slider {
+    grid-area: infS;
+}
+*/
+
+
 /* Псевдокласс - черный фон DEL / ADD on click 
 СТАВИМ ПОСЛЕ ДИСПЛЕЕВ, т.к. дисплеии с bg: img, чтобы перекрыть фоном сверху img
 */ 
@@ -305,7 +340,7 @@ body {
 }
 
 /* Рабочая кнопка на JS */
-.phone_btn1 {
+.phone_button {
     width: 50px;
     height: 50px;
     /*background-color: rgba(126, 252, 0, 0.589);*/
@@ -313,20 +348,14 @@ body {
 
     position: absolute;
     z-index: 40;
-
+    cursor: pointer;
+}
+.phone_btn1 {
     top: 458px;
     left: 84px;
 }
 
 .phone_btn2 {
-    width: 50px;
-    height: 50px;
-    /*background-color: rgba(126, 252, 0, 0.589);*/
-    border-radius: 50%;
-
-    position: absolute;
-    z-index: 40;
-
     top: 258px;
     left: 3px;
 }
@@ -349,18 +378,22 @@ body {
 
 /* Слайдер */ 
 .infinity-slider {
-    position: relative;
     width: 100%;
+    position: relative; 
 }
 .sl {
-    position: absolute;
-    opacity: 1;
+
     transition: all ease 1s;
+    flex: 0 0 100%;
+    position: absolute;
 }
-.bg-fon {
-    width: 100%;
-    box-shadow: 0 6px 0 0 #648BF0;
-    height: 588px;
+.sl img {
+    display: inline-block;
+    margin: auto;
+}
+/*Класс скрывает слайд sl */
+.opa {
+    opacity: 0;
 }
 
 /* Services */ 
