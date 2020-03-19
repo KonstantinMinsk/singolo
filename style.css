@@ -29,6 +29,9 @@ body {
 
     box-shadow: 0 7px 0 0 #323746;
     box-sizing: content-box;
+
+    position: fixed;
+    z-index: 50;
 }
 
 .logo {
@@ -141,6 +144,8 @@ body {
     background-color: #f06c64;
     box-shadow: 0 6px 0 0 #ea676b;
     transition: all ease 1s;
+
+    padding-top: 89px;
 }
 .shadow_color {
     box-shadow: 0 6px 0 0 #648BF0;

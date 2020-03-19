@@ -12,12 +12,43 @@ menuLink() // вызываем ф-цию иначе скрипт не будет
 
 
 
+// Scroll 
+document.addEventListener('scroll', onscroll);
+function onscroll(event) {
+   // console.log(event); // смотрим работает ли скролл 
+   // console.log(curPos); // смотрим появляются ли значения
+
+    const curPos = window.scrollY;
+    let sections = document.querySelectorAll('body > section') // секции 
+    
+    sections.forEach( (el) => {
+
+       // console.log(el.getAttribute('id')); смотрим появляются ли id блоков
+       // console.log(el); // смотрим элемент
+       // debugger; // позволяет ловить елемент в консоли;
+       // el.getAttribute('id');
+
+        if(el.offsetTop-90 <= curPos && (el.offsetTop + el.offsetTop) > curPos) {
+            document.querySelectorAll('#menu a').forEach((a) => {
+                a.classList.remove('nav_active');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('nav_active');
+                } 
+            })
+        }
+    })
+}
+onscroll();
+
+
+
+
 
 const PORTFOLIO_LIST = document.getElementById("portfolio-list"); 
 // Активные табы
 function menuTab() {
     PORTFOLIO_LIST.addEventListener('click', (event) => {
-        event.preventDefault();
+        event.preventDefault(); // останавливаем выполнение сценария на странице, т.к. почему-то перебрасывает вверх
         if ( event.target.tagName === "A") {
         PORTFOLIO_LIST.querySelectorAll('a').forEach(el => el.classList.remove('li-active'));
         event.target.classList.add('li-active');
