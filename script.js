@@ -28,7 +28,7 @@ function onscroll(event) {
        // debugger; // позволяет ловить елемент в консоли;
        // el.getAttribute('id');
 
-        if(el.offsetTop-90 <= curPos && (el.offsetTop + el.offsetTop) > curPos) {
+        if(el.offsetTop - 130 <= curPos && (el.offsetTop + el.offsetTop) > curPos) {
             document.querySelectorAll('#menu a').forEach((a) => {
                 a.classList.remove('nav_active');
                 if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {

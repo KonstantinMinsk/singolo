@@ -22,6 +22,9 @@ body {
 }
 
 /* Шапка */ 
+section:nth-child(1) {
+    padding-bottom: 89px;
+}
 .header__page {
     width: 100%;
     background-color: #2d303a;
@@ -109,8 +112,7 @@ body {
     margin-right: 0;
 }
 .navigation a:not(.nav_active):hover {
-    text-decoration: underline;
-    color: #d69c99;
+    color: #d3746f;
 }
 /* вместо псевдокласса active  - добавляем сектор nav_active и меняем цвет через js
 .navigation a:active {
@@ -144,8 +146,6 @@ body {
     background-color: #f06c64;
     box-shadow: 0 6px 0 0 #ea676b;
     transition: all ease 1s;
-
-    padding-top: 89px;
 }
 .shadow_color {
     box-shadow: 0 6px 0 0 #648BF0;
