@@ -13,32 +13,34 @@ menuLink() // вызываем ф-цию иначе скрипт не будет
 
 
 // Scroll 
-document.addEventListener('scroll', onscroll);
-function onscroll(event) {
-   // console.log(event); // смотрим работает ли скролл 
-   // console.log(curPos); // смотрим появляются ли значения
+function Scroll () {
+    document.addEventListener('scroll', onscroll);
+    function onscroll(event) {
+    // console.log(event); // смотрим работает ли скролл 
+    // console.log(curPos); // смотрим появляются ли значения
 
-    const curPos = window.scrollY;
-    let sections = document.querySelectorAll('body > section') // секции 
-    
-    sections.forEach( (el) => {
+        const curPos = window.scrollY + 89;
+        let sections = document.querySelectorAll('body > section') // секции 
+        
+        sections.forEach( (el) => {
 
-       // console.log(el.getAttribute('id')); смотрим появляются ли id блоков
-       // console.log(el); // смотрим элемент
-       // debugger; // позволяет ловить елемент в консоли;
-       // el.getAttribute('id');
+        // console.log(el.getAttribute('id')); смотрим появляются ли id блоков
+        // console.log(el); // смотрим элемент
+        // debugger; // позволяет ловить елемент в консоли;
+        // el.getAttribute('id');
 
-        if(el.offsetTop - 130 <= curPos && (el.offsetTop + el.offsetTop) > curPos) {
-            document.querySelectorAll('#menu a').forEach((a) => {
-                a.classList.remove('nav_active');
-                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
-                    a.classList.add('nav_active');
-                } 
-            })
-        }
-    })
+            if(el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+                document.querySelectorAll('#menu a').forEach((a) => {
+                    a.classList.remove('nav_active');
+                    if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                        a.classList.add('nav_active');
+                    } 
+                })
+            }
+        })
+    }
 }
-onscroll();
+Scroll();
 
 
 
@@ -214,7 +216,7 @@ function clickArroy() {
 }
 //clickArroy() ; // делаем авто клик, чтобы слайдер работал с ПЕРВОГО клика пользователя
 // клик по левой кнопке
-function ArrBtn(ARROW, ) {
+function ArrBtn(ARROW) {
     ARROW.onclick = function() {
         if (current - 1 == -1) {
             current = slides.length-1;
