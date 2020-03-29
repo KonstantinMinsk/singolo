@@ -12,6 +12,9 @@
         <header class="header__page">
             <div class="wrapper clearfix">
                 <h1 class="visuallyhidden">Task Singolo</h1>
+                <span class="hamburger">
+                    <span class="hamburger__line"></span>
+                </span>
                 <a class="logo" href="#">Singolo<span>*</span></a>
                 <nav class="header__navigation">
                     <ul class="navigation" id="menu">
@@ -26,69 +29,39 @@
         </header>
     </section>
 
+
+    
     <section class="slider" id="home">
         <div class="wrapper">
-        <div class="slider-flex">   
-            
-                <button class="button-slider button-slider-left"></button>
-            
-                <div class="infinity-slider">
-                    <div class="sl">
-                        <div class="mobile__vertical">
-                            <div class="display__vertical"></div>
-                            <div class="shadow__vertical"></div>
-                            <div class="phone__vertical"></div>
-                            <div class="phone_button phone_btn1"></div>
-                        </div>
-                        <div class="mobile__horizontal">
-                            <div class="display__horizontal"></div>
-                            <div class="shadow__horizontal"></div>
-                            <div class="phone__horizontal"></div>
-                            <div class="phone_button phone_btn2"></div>
-                        </div>
-                    </div>
-                    <div class="sl opa">
-                        <img src="./assets/Slider2.png" alt="#">
-                    </div>
-                </div>    
-
-                <button class="button-slider button-slider-right"></button>
-        </div>
-        </div>
-    </section>
-
-
-
-
-<!--
-    <section class="slider">
-        <div class="wrapper">
-            <div class="grid-slider">   
-                
-                    <button class="button-slider button-left"></button>
-                
+            <div class="slider__flex slider-container">
+                    <div class="slider__buttons">
+                        <button class="button-slider button-slider-left"></button>
+                        <button class="button-slider button-slider-right"></button>
+                    </div>    
                     <div class="infinity-slider">
-                        <div class="sl">
-                            <div class="mobile__vertical">
-                                <div class="display__vertical"></div>
-                                <div class="shadow__vertical"></div>
-                                <div class="phone__vertical"></div>
-                                <div class="phone_button phone_btn1"></div>
+                        <div class="slide slide__mobile slide-active">
+                            <div class="mobile mobile__vertical">
+                                <div class="mobile__phone phone__vertical">
+                                    <div class="mobile__display display__vertical"></div>
+                                    <div class="mobile__button mobile-button-left"></div>
+                                </div>
                             </div>
-                            <div class="mobile__horizontal">
-                                <div class="display__horizontal"></div>
-                                <div class="shadow__horizontal"></div>
-                                <div class="phone__horizontal"></div>
-                                <div class="phone_button phone_btn2"></div>
+                            <div class="mobile mobile__horizontal">
+                                <div class="mobile__phone phone__horizontal">
+                                    <div class="mobile__display display__horizontal"></div>
+                                    <div class="mobile__button mobile-button-right"></div>
+                                </div>
                             </div>
-                        </div>    
-                    </div>
-                    
-                    <button class="button-slider button-right"></button>
+                        </div>
+
+                        <div class="slide slide__img">
+                            <img src="./assets/Slider2.png" alt="#">
+                        </div>
+                    </div>    
             </div>
         </div>
     </section>
---> 
+
 
 
     <section class="services" id="services">
@@ -240,22 +213,10 @@
                         <a href="#" class="social-icons__item" target="_blank"></a>
                     </div>
                 </section>
-                <section class="person-item">
-                    <figure>
-                        <img src="./assets/persons/Image1.png" alt="Adam Jensen">
-                        <figcaption>Adam Jensen Adam Jensen Adam Jensen</figcaption>
-                    </figure>
-                    <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icons__item" target="_blank"></a>
-                        <a href="#" class="social-icons__item" target="_blank"></a>
-                        <a href="#" class="social-icons__item" target="_blank"></a>
-                        <a href="#" class="social-icons__item" target="_blank"></a>
-                    </div>
-                </section>
-            </article>
-        </div>
-    </section>
+            </section>
+         </article>
+    </div>
+</section>
 
     <section class="contacts" id="contacts">
         <div class="wrapper">
